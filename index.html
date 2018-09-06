@@ -206,7 +206,7 @@ var reset = function(){
      initialize();
 }
 var initialize = function(){
-    var newRock = new Rock(192/2,0, 9,9, "rock1.png", "green")
+    var newRock = new Rock(192/2,0, 9,9, "images/rock1.png", "green")
     mAllObjects["rocks"].push(newRock)
 
 }
@@ -250,29 +250,29 @@ var myTurn = true
 var drawBroom= function(){
     var broomI = new Image()
     if(lastBroomPosition === 0){
-        broomI.src = "broomMA.png"
+        broomI.src = "images/broomMA.png"
     }else if(lastBroomPosition === -1){
-        broomI.src = "broomL1A.png"
+        broomI.src = "images/broomL1A.png"
     }else if(lastBroomPosition === -2){
-        broomI.src = "broomL2A.png"
+        broomI.src = "images/broomL2A.png"
     }else if(lastBroomPosition === 2){
-        broomI.src = "broomR2A.png"
+        broomI.src = "images/broomR2A.png"
     }else if(lastBroomPosition === 1){
-        broomI.src = "broomR1A.png"
+        broomI.src = "images/broomR1A.png"
     }
     ctx.drawImage(broomI, broomX, broomY)
 
     var broomI2 = new Image()
     if(broomPosition === 0){
-        broomI2.src = "broomM.png"
+        broomI2.src = "images/broomM.png"
     }else if(broomPosition === -1){
-        broomI2.src = "broomL1.png"
+        broomI2.src = "images/broomL1.png"
     }else if(broomPosition === -2){
-        broomI2.src = "broomL2.png"
+        broomI2.src = "images/broomL2.png"
     }else if(broomPosition === 2){
-        broomI2.src = "broomR2.png"
+        broomI2.src = "images/broomR2.png"
     }else if(broomPosition === 1){
-        broomI2.src = "broomR1.png"
+        broomI2.src = "images/broomR1.png"
     }
     ctx.drawImage(broomI2, broomX, broomY)
 
@@ -314,7 +314,7 @@ var draw = function(){
    
      if(onTitle === true){
         var bg = new Image()
-        bg.src = "olympic1a.png"
+        bg.src = "images/olympic1a.png"
         ctx.drawImage(bg, 192/2 - 72,50)
      }else if(gameOver === true){
         ctx.fillStyle = 'black';
@@ -322,30 +322,30 @@ var draw = function(){
 
          if(greenWon === true){
              var m1 = new Image()
-             m1.src = "gold2.png"
+             m1.src = "images/gold2.png"
              ctx.drawImage(m1, 0, 192 * 1/4)
 
              var m2 = new Image()
-             m2.src = "silver.png"
+             m2.src = "images/silver.png"
              ctx.drawImage(m2, 192 * 3/4, 192/2)
 
 
              var m3 = new Image()
-             m3.src = "gWins.png"
+             m3.src = "images/gWins.png"
              ctx.drawImage(m3, 192/2 - 128/2, 10)
 
 
          }else{
             var m1 = new Image()
-             m1.src = "silver.png"
+             m1.src = "images/silver.png"
              ctx.drawImage(m1, 192 * 1/4 - 20, 192/2)
 
              var m2 = new Image()
-             m2.src = "gold2.png"
+             m2.src = "images/gold2.png"
              ctx.drawImage(m2, 192 - 135, 192 * 1/4)
 
              var m3 = new Image()
-             m3.src = "pWins.png"
+             m3.src = "images/pWins.png"
              ctx.drawImage(m3, 192/2 - 128/2, 10)
          }
     }else{
@@ -353,9 +353,9 @@ var draw = function(){
         var tile = new Image()
         if(i === 160){
             
-            tile.src = "goal2.png"
+            tile.src = "images/goal2.png"
         }else{
-            tile.src = "court.png"
+            tile.src = "images/court.png"
 
         }
         ctx.drawImage(tile, 192/2 - 12, i)
@@ -408,11 +408,11 @@ var updateL = function(){
 
             if(myTurn){
                 myTurn = false
-                var newRock = new Rock(192/2,0, 9,9, "rock37.png", "purple")
+                var newRock = new Rock(192/2,0, 9,9, "images/rock37.png", "purple")
                   mAllObjects["rocks"].push(newRock)
             }else{
                 myTurn = true
-                var newRock = new Rock(192/2,0, 9,9, "rock1.png", "green")
+                var newRock = new Rock(192/2,0, 9,9, "images/rock1.png", "green")
 
                   mAllObjects["rocks"].push(newRock)
             }
@@ -468,7 +468,7 @@ image.onload = function () {
     // draw the image into the canvas
    // ctx.drawImage(image, 0, 0);
 }
-image.src = 'cat.png';
+image.src = "images/cat.png";
 initialize();
 runGameLoop();
 
